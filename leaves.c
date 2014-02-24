@@ -130,11 +130,17 @@ plugin_leaves_callback(int argc, char **argv __unused)
 }
 
 int
-pkg_register_cmd(const char **name, const char **desc, int (**exec)(int argc, char **argv))
+pkg_register_cmd(int idx, const char **name, const char **desc, int (**exec)(int argc, char **argv))
 {
 	*name = myname;
 	*desc = mydescription;
 	*exec = plugin_leaves_callback;
 
 	return (EPKG_OK);
+}
+
+int
+pkg_register_cmd_count (void)
+{
+    return 1;
 }
