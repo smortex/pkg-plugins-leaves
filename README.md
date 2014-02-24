@@ -24,8 +24,8 @@ There is no configuration options available for this plugin.
 
 Add the plugin to `${PREFIX}/etc/pkg.conf`:
 
-	PLUGINS:
-	 - leaves
+	PKG_PLUGINS_DIR : /usr/local/lib/pkg/plugins
+	PLUGINS         : [ leaves ]
 
 Then check that it is recongnized and loaded by pkgng by executing the `pkg
 plugins` command:
