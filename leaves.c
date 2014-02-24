@@ -67,7 +67,7 @@ plugin_leaves_usage(void)
 }
 
 int
-plugin_leaves_callback(int argc, char **argv __unused)
+plugin_leaves_callback(int argc, char **argv)
 {
 	struct pkgdb *db = NULL;
 	struct pkgdb_it *it;
